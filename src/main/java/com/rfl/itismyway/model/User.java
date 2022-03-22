@@ -16,6 +16,8 @@ public class User extends AbstractPersistable<Integer> {
     private String name;
     private String email;
     private String password;
+    private Date registered;
+    private boolean enabled;
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), uniqueConstraints =
             {@UniqueConstraint(columnNames = {"user_id", "role"}, name = "user_roles_unique")})
