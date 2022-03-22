@@ -6,12 +6,12 @@ create sequence global_seq start 100000;
 
 create table users
 (
-    id       integer primary key default nextval('global_seq'),
-    name     varchar,
-    email    varchar not null,
-    password varchar not null,
-    registered timestamp not null default now(),
-    enabled boolean default true
+    id         integer primary key default nextval('global_seq'),
+    name       varchar,
+    email      varchar   not null,
+    password   varchar   not null,
+    registered timestamp not null  default now(),
+    enabled    boolean             default true
 );
 create table user_roles
 (
